@@ -20,7 +20,7 @@ node {
     def resourceGroup = '<webappwebrg>' 
     def webAppName = '<DemoJenkinsWebApp>'
     // login Azure
-    withCredentials([azureServicePrincipal('3882b70d-a91e-468c-9928-820358bfbd73')]) {
+    withCredentials([azureServicePrincipal('<664492c5-3aea-4549-acb6-bc28f41faf9e>')]) {
       sh '''
         az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET -t $AZURE_TENANT_ID
         az account set -s $AZURE_SUBSCRIPTION_ID
